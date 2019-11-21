@@ -4,15 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+
+    <ImageView
+        android:id="@+id/imageView_output"
+        android:layout_width="58dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="176dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drop_down"
+        app:srcCompat="@drawable/icon_vietnam" />
+
+    <ImageView
+        android:id="@+id/imageView_const2"
+        android:layout_width="58dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drop_down"
+        app:srcCompat="@drawable/icon_vietnam" />
+
+    <Spinner
+        android:padding="5dp"
+        android:id="@+id/drop_down"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_input"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="Input here"
+        android:inputType="number"
+        android:padding="5dp"
+        android:textColor="#000"
+        app:layout_constraintEnd_toStartOf="@+id/textView_const"
+        app:layout_constraintTop_toBottomOf="@+id/drop_down" />
+
+    <TextView
+        android:id="@+id/textView_const"
+        android:layout_width="60dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="VND"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drop_down" />
+
+    <TextView
+        android:id="@+id/textViewout"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@+id/imageView_output"
+        app:layout_constraintTop_toBottomOf="@+id/editText_input"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/textView_curr"
+        android:layout_width="100dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="68dp"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_const" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
